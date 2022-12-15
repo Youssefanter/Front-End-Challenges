@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Dongle&family=Ubuntu&display=swap");
+
+.container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.container .buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px 20px 0 20px;
+}
+.container .buttons > * {
+  margin-right: 10px;
+}
+.container .buttons select {
+  border: none;
+  background-color: white;
+  width: 120px;
+  height: 40px;
+  padding-left: 5px;
+}
+.container .buttons .style {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  padding: 12px;
+  height: 12px;
+  background-color: white;
+}
+.container .buttons .style:hover {
+  background-color: #666262;
+  cursor: pointer;
+}
+.container .buttons .bold {
+  font-weight: bold;
+}
+.container .buttons .minus {
+}
+.container .buttons .number {
+}
+.container .buttons .plus{
+}
+.container .buttons .invert {
+}
+.container .text {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+.container .text p {
+  background-color: white;
+  padding: 10px;
+  height: 50px;
+}
