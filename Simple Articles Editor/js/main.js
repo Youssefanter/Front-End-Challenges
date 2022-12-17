@@ -7,7 +7,6 @@ select.addEventListener("click", () => {
 let bold = document.querySelector(".bold");
 bold.addEventListener("click", () => {
   let text = document.querySelector("p");
-  console.log(text.style.fontWeight);
   if (text.style.fontWeight == "bold") {
     text.style.fontWeight = "normal";
   } else {
@@ -16,7 +15,27 @@ bold.addEventListener("click", () => {
 });
 
 let minus = document.querySelector(".minus");
-let number = document.querySelector(".number");
 let plus = document.querySelector(".plus");
-minus.addEventListener("click", () => {});
-plus.addEventListener("click", () => {});
+minus.addEventListener("click", () => {
+  let div = document.querySelector(".number");
+  let text = document.querySelector("p");
+  let number = div.textContent;
+  let intNumber = parseInt(number);
+  intNumber--;
+  div.textContent = intNumber;
+  text.style.fontSize = `${intNumber}px`;
+});
+plus.addEventListener("click", () => {
+  let div = document.querySelector(".number");
+  let text = document.querySelector("p");
+  let number = div.textContent;
+  let intNumber = parseInt(number);
+  intNumber++;
+  div.textContent = intNumber;
+  text.style.fontSize = `${intNumber}px`;
+});
+let invert = document.querySelector(".invert");
+
+invert.addEventListener("click", () => {
+  document.querySelector("p").classList.toggle("dark");
+});
