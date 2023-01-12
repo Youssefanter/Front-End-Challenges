@@ -15,27 +15,31 @@ bold.addEventListener("click", () => {
 });
 
 let minus = document.querySelector(".minus");
+let number = document.querySelector(".number");
 let plus = document.querySelector(".plus");
 minus.addEventListener("click", () => {
-  let div = document.querySelector(".number");
   let text = document.querySelector("p");
-  let number = div.textContent;
-  let intNumber = parseInt(number);
-  intNumber--;
-  div.textContent = intNumber;
-  text.style.fontSize = `${intNumber}px`;
+  number.innerHTML--;
+  console.log(number);
+  text.style.fontSize = `${number.innerHTML}px`;
 });
 plus.addEventListener("click", () => {
-  let div = document.querySelector(".number");
   let text = document.querySelector("p");
-  let number = div.textContent;
-  let intNumber = parseInt(number);
-  intNumber++;
-  div.textContent = intNumber;
-  text.style.fontSize = `${intNumber}px`;
+  number.innerHTML++;
+  console.log(number);
+  text.style.fontSize = `${number.innerHTML}px`;
 });
-let invert = document.querySelector(".invert");
 
+let invert = document.querySelector(".invert");
 invert.addEventListener("click", () => {
-  document.querySelector("p").classList.toggle("dark");
+  let text = document.querySelector(".text");
+  let p = document.querySelector("p");
+
+  if (p.style.backgroundColor === "white") {
+    p.style.backgroundColor = "black";
+    p.style.color = "white";
+  } else {
+    p.style.backgroundColor = "white";
+    p.style.color = "black";
+  }
 });
